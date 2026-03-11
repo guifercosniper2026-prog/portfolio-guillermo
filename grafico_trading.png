@@ -1,0 +1,31 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# 1. Simulamos una sesión completa de trading (NY Session)
+datos = {
+    'Hora': ['08:00', '08:30', '09:00', '09:30', '10:00', '10:30', '11:00'],
+    'Precio_EURUSD': [1.0850, 1.0842, 1.0865, 1.0890, 1.0875, 1.0882, 1.0910],
+    'Volumen': [800, 1200, 3100, 4500, 2800, 3500, 4100]
+}
+
+df = pd.DataFrame(datos)
+
+# 2. Mostramos el análisis en la terminal
+print("--- ANALIZADOR DE MERCADOS IA ACTIVADO ---")
+print(df)
+
+# 3. GENERAMOS EL GRÁFICO PARA TU PORTAFOLIO
+plt.figure(figsize=(10, 5))
+plt.plot(df['Hora'], df['Precio_EURUSD'], marker='o', color='#2ecc71', linewidth=2)
+plt.title('Análisis Sintético: Acción del Precio EUR/USD (NY Session)')
+plt.xlabel('Sesión (UTC-5)')
+plt.ylabel('Precio Quoted')
+plt.grid(True, linestyle='--', alpha=0.6)
+
+# Guardamos la imagen para GitHub
+plt.savefig('grafico_trading.png')
+print("\n📊 Gráfico generado: 'grafico_trading.png'")
+
+# 4. Guardamos los datos
+df.to_csv('reporte_profesional_trading.csv', index=False)
+print("✅ Archivo CSV guardado con éxito.")
