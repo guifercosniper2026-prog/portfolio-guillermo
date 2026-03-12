@@ -17,6 +17,34 @@
             min-height: 100vh;
             padding: 20px;
         }
+        .botonera {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.boton-pro {
+    padding: 12px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s, background 0.3s;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.boton-pro:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.2);
+}
+
+.azul { background-color: #007AFF; color: white; }
+.verde { background-color: #34C759; color: white; }
+.rojo { background-color: #FF3B30; color: white; }
 
         .container {
             max-width: 420px;
@@ -102,23 +130,17 @@
         <img src="foto.png" alt="Guillermo" class="profile-img">
         
         <h1>GUILLERMO</h1>
-        <p class="subtitle">TRADER | WRITER | DEVELOPER</p>
+ <p class="subtitle">Dominando los mercados y diseñando soluciones digitales con precisión.</p>
 
-        <div class="btn-container">
-            <a href="#" class="btn">
-                Trader Specialist - Sesión NY
-            </a>
+<div class="botonera">
+    <a href="https://github.com/guifercosniper2026-prog/portfolio-apple" class="boton-pro azul">💻 Código Python</a>
+    <a href="reporte_profesional_trading.csv" download class="boton-pro verde">📊 Data EUR/USD</a>
+    <a href="SOP-Guillermo-ISO.pdf" target="_blank" class="boton-pro rojo">📕 Manual SOP</a>
+</div>
 
-            <a href="SOP-Guillermo-ISO.pdf" target="_blank" class="btn">
-                Technical Writer & SOP
-            </a>
-
-            <a href="#" class="btn">
-                Designer Web Jr
-            </a>
-        </div>
-
-        <div class="video-wrapper">
+<div align="center" style="margin-top: 30px;">
+    <img src="grafico_trading.png" alt="Análisis de Trading" style="width:100%; max-width:600px; border-radius: 15px; border: 1px solid #444;">
+</div>
             <video width="100%" controls>
                 <source src="operativa-sniper.mp4" type="video/mp4">
                 Tu navegador no soporta el video local.
